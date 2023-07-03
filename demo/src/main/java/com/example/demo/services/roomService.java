@@ -3,9 +3,11 @@ package com.example.demo.services;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.*;
+
 
 import com.example.demo.dto.roomDto;
+
+import java.util.*;
 
 @Service
 public class roomService {
@@ -20,6 +22,7 @@ public class roomService {
     public List<roomDto> getAll(){
         List<roomDto> res = new ArrayList<>(rooms.values());
         Collections.reverse(res);
+        return res;
     }
 
     public roomDto createRoom(String name){
