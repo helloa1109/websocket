@@ -25,7 +25,7 @@ public class lobbyController {
     }
 
     @PostMapping("/create")
-    public roomDto postCreate(@RequestBody Map<String, Object> data){
-        return roomService.createRoom(data.get("name").toString());
+    public roomDto postCreate(String name ){
+        return roomService.createRoom(name);
     }
 }
